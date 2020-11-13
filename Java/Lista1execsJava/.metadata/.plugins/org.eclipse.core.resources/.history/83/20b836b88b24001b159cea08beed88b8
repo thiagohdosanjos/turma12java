@@ -1,0 +1,36 @@
+package Lista4;
+
+import java.util.Scanner;
+
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+
+		Scanner leia = new Scanner(System.in);
+		
+		int vetor [] =  new  int [5];
+		int pontuacao =  0 , nMaior =  0 ;
+		
+		for (pontuacao = 0 ; pontuacao < 5 ; pontuacao ++ )
+		{
+			System.out.println("Informe o valor: ");
+			vetor[pontuacao] = leia.nextInt();
+		}
+		
+		for (pontuacao = 0 ; pontuacao < 5 ; pontuacao ++ )
+		{
+			System.out.println("\nValor da posição: "+(pontuacao + 1 )+ vetor [pontuacao]);
+			//System.out.println("Valor posição% d:% d " , (pontuacao + 1 ), vetor [pontuacao]);
+			
+			if (vetor [pontuacao] > nMaior)
+			{
+				nMaior = vetor [pontuacao];
+			}
+		}
+		System.out.println("\nMaior valor: "  + nMaior);
+
+	}
+
+		
+}
+

@@ -1,0 +1,46 @@
+package Lista4;
+
+public class Exercicio2 {
+	public  static  void  main ( String [] args )
+	{
+		
+		Scanner leia =  novo  Scanner ( Sistema . In );
+		
+		vetor int [] =  novo  int [ 10 ];
+		int soma =  0 , c, maior =  0 , x =  0 , cmaior =  0 ;
+		mídia dupla =  0 ;
+		
+		para (c = 0 ; c < 10 ; c ++ )
+		{
+			Sistema . para fora . println ( " Insira o valor corrigido a jogada de 1 a 6: " );
+			vetor [c] = leia . nextInt ();
+			Sistema . para fora . printf ( " \ n Valor posição% d:% d \ n \ n " , c, vetor [c]);
+			
+			soma = soma + vetor [c];
+			mídia = soma /  10 ;
+			
+			if (vetor [c] > = maior)
+			{				
+									
+				maior =  0 ;
+				maior = maior + vetor [c];
+				cmaior ++ ;
+				
+			}
+
+		}
+		
+		if (vetor [ 0 ] < maior)
+		{
+			cmaior - ;
+		}
+		
+		sysout
+		Sistema . para fora . println ( " ____________________________________________________________________ " );
+		Sistema . para fora . println ( " \ n Total de valores somados: "  + soma);
+		Sistema . para fora . println ( " \ n Maior valor: "  + maior);
+		Sistema . para fora . println ( " \ n Média aritimética dos valores lançados: "  + media);
+		Sistema . para fora . println ( " \ n Quantas foram as ocorrências da maior pontuação: "  + cmaior);
+
+	}
+}

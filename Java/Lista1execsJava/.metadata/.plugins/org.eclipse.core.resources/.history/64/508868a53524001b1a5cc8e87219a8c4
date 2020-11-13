@@ -1,0 +1,46 @@
+package Desafios;
+
+import java.util.Scanner;
+	
+public class DesafioPaulistinhacomVetor {
+
+
+	public static void main(String[] args) 
+	{
+
+		Scanner leia = new Scanner(System.in);
+	
+		String times[]= {"CORINTHIANS","PALMEIRAS","SANTOS", "SPFC"};
+		//int pontos[]= new int[4];
+		int pontosPartidas[][] = new int[4][4];
+		int indiceTime = 0;
+		int indiceRodada = 0;
+		char resultado;
+	
+		System.out.println("-=-=-=-=-=--=-=-=-=-PAULIXTINHA-=-=-=-=-=--=-=-=-=-");
+	
+		for (indiceRodada = 0; indiceRodada < 4; indiceRodada++) 
+		{
+			System.out.println("\n\t\tRODADA " + (indiceRodada + 1));
+			for(indiceTime = 0; indiceTime<4; indiceTime++) 
+			{
+				System.out.printf("%S:  Ganhou / Empatou / Perdeu: [G/E/P]  ", times[indiceTime]);
+				resultado = leia.next().toUpperCase().charAt(0);
+				if (resultado == 'P') {
+					pontosPartidas[indiceTime][indiceRodada] = 0;
+				}else if (resultado == 'E' ) {
+					pontosPartidas[indiceTime][indiceRodada] = 1;
+				}else if (resultado == 'G' ) {
+					pontosPartidas[indiceTime][indiceRodada] = 3;
+				} else {
+					System.out.println("Seleciona somente as opções disponíveis.");
+				}
+			}
+		} for (indiceRodada = 0; indiceRodada < 4; indiceRodada++) {
+			System.out.printf("\nResultados da  %dª partida: \n", indiceRodada + 1);
+			for(indiceTime = 0; indiceTime<4; indiceTime++) {
+				System.out.printf("%s marcou %d pontos\n", times[indiceTime], pontosPartidas[indiceTime][indiceRodada]);
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+package Lista4;
+
+import java.util.Scanner;
+
+public class TesteDay 
+{
+
+		public static void main (String[] args) 
+		{
+			Scanner leia = new Scanner(System.in);
+			int numero[] = new int [5];
+			int x=0;
+			int maiorP=0;
+			
+			for(x=0 ; x<5; x++) 
+			{
+				System.out.println("\nDigite um valor:");
+				numero[5]=leia.nextInt();	
+			}
+			for(x=0 ; x<5; x++) 
+			{
+				System.out.printf("\nValor da posição %d, %d:" +(x+1), +numero[x]);
+				
+			}
+			for(x=0 ; x<5; x++) 
+			{
+				System.out.printf("\nValor da posição %d, %d:" +(x+1), +numero[x]);
+				if(numero[x]>maiorP) 
+				{
+					maiorP= numero[x];
+				}
+				
+			}
+			System.out.println("\nA maior pontuação foi:"+maiorP);
+		}
+		
+	}

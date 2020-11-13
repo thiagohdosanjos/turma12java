@@ -1,0 +1,51 @@
+package Desafios;
+
+import java.util.Scanner;
+
+public class Banco 
+{
+	public static void main(String[] args) {
+
+		Scanner leia = new Scanner(System.in);
+		
+		String contas[]= {"Conta Poupança","Conta Corrente","Conta Especial","Conta Empresarial"};
+		
+		int conta;
+		float NumConta=0;
+		int operacao[] = new int[10];
+		double Debito=0,Credito=0, Saldo=0;
+		float CPF=0;
+		int x=0;
+		final int talaoCheque = 0;
+		int metodo;
+		boolean validacao = true;
+		int indice=0;
+		char adicionar='S';
+		char voltar;
+		char verificacao='S';
+		char limite;
+		
+		for(String conte: contas) {
+			System.out.print((indice+1)+ " - ");
+			System.out.println(conte);
+			indice++;
+		}
+		
+		//for(x=0;x<4;x++){
+			//System.out.println((x+1)+" - "+contas[x]);
+		
+			System.out.println("\nEscreva um codigo para a utilização da conta(1/2/3/4): ");
+			conta=leia.nextInt();
+		
+		if (conta == 2) 
+		{
+			for (x = 0 ; x < indice; x ++ )
+			{
+				System.out.println("\n INSIRA A " + (x + 1 ) + " º MOVIMENTAÇÃO: \n");
+				System.out.println("\n CRÉDITO (C) OU DÉBITO (D)? " );
+				limite = leia.next().charAt(0);
+			
+		}
+	}	
+}
+}

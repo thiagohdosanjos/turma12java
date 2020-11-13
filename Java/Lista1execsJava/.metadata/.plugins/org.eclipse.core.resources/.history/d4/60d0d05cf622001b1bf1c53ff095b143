@@ -1,0 +1,33 @@
+package Lista2;
+
+import java.util.Scanner;
+
+public class Lista2exec7 {
+
+	public static void main(String[] args) 
+	{
+		{
+			
+			Scanner leia = new Scanner(System.in); // ok
+			double base=0.0, altura=0.0, area=0.0; //ok
+			System.out.print("Digite a base:"); //ok
+			base = leia.nextDouble(); //ok
+			System.out.print("Digite a altura: "); //ok
+			altura = leia.nextDouble(); //ok
+			
+			//usando tenario
+			System.out.println( (base > 0 && altura > 0 )? "A area do triangulo é "+((base * altura)/2):"Vc não digitou valores validos!!!" );
+			
+			//usando if normal
+			if (base > 0 && altura > 0 )
+			{
+				System.out.printf("A area do triangulo é %.2f", ((base * altura)/2));
+			
+			}
+			else
+			{
+				System.out.println("Vc não digitou valores validos!!!");
+			}
+				
+		}
+	}

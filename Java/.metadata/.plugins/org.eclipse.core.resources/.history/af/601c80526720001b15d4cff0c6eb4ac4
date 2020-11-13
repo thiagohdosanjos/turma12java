@@ -1,0 +1,22 @@
+package Lista1;
+
+import java.util.Scanner;
+
+public class exemploexec1 
+{
+	public static void main(String[] args) 
+	{
+		Scanner leia = new Scanner (System.in);
+		int evento; int h; int m; int s;
+		
+		System.out.println("Tempo de duração do evento em segundos: ");
+		evento = leia.nextInt();
+		
+		m = (evento % 3600)/60;
+		h = evento / 3600;
+		s = ((evento % 3600)%60);
+		
+		System.out.println ("\nTotal em minutos: " + m + "\nTotal em horas: "+ h + "\nTotal em segundos: "+s);
+
+	}
+}

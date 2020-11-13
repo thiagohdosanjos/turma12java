@@ -1,0 +1,33 @@
+package Lista2;
+
+public class Exercício2 {
+	
+	public static void main(String [] args)
+	
+	/*2) Elabore um sistema que leia as variáveis C e N, 
+	respectivamente código e número de horas trabalhadas de um operário.
+	E calcule o salário sabendo-se que ele ganha R$ 10,00 por hora. 
+	Quando o número de horas exceder a 50 calcule o excesso de pagamento armazenando-o
+	na variável E, caso contrário zerar tal variável. A hora excedente de trabalho vale 
+	/*R$ 20,00. No final do processamento imprimir o salário total e o salário excedente.
+	*
+	*
+	*OBJETIVO
+	*INICIO
+	*	VARIAVEIS - INT, STRING, CHAR, STRING[]
+	*	ENTRADAS - System.out.print, leia(scanner)
+	*	PROCESSAMENTO - if, for, while, do while, calculos em geral
+	* 	SAIDA - System.out.print ou para outra variavel
+	* 	FIM	
+	*/
+	
+	//Variaveis
+	String C;
+	int N;
+	double salario;
+	double valorHora = 10.00;
+	int limite = 50;
+	int E;
+	double valorExcedente = 20.00;
+	
+}

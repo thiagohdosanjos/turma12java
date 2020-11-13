@@ -1,0 +1,24 @@
+package Desafios;
+
+import java.util.Scanner;
+
+public class DesafioPaulistinhacomVetor {
+
+	public static void main(String[] args) {
+		Scanner leia = new Scanner(System.in);
+		
+		String times[]= {"CORINTHIANS","PALMEIRAS","SANTOS", "SPFC"};
+		int pontos[]= new int[4];
+		
+		System.out.println("Times:");
+		
+		for (int x = 0; x<4; x++) {
+			
+			System.out.println(times[x]+": Ganhou / Empatou / Perdeu: ");
+			
+			
+		}
+		
+		
+	}
+}

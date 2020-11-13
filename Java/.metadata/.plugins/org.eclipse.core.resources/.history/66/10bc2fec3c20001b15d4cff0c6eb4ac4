@@ -1,0 +1,15 @@
+
+public class MeuNome {
+
+	public static void main(String[] args) {
+		
+		int anoNascimento = 1999;
+		int idade = 0;
+		
+		System.out.println("Thiago dos Anjos");
+		idade = 2020 - anoNascimento;
+		System.out.println("Minha idade é " + idade + "anos");
+		
+	}
+	
+}

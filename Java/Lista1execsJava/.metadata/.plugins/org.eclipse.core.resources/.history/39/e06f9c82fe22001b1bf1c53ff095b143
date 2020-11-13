@@ -1,0 +1,31 @@
+package Lista2;
+
+import java.util.Scanner;
+
+public class Exercício1 {
+	
+	public static void main(String[] args) 
+	{
+		
+		Scanner leia = new Scanner(System.in);
+		double p, ex, m;
+		System.out.println("Insira o peso aqui:");
+		p = leia.nextDouble();
+		
+		if (p > 50.00);
+		{
+			ex = p * 4.00;
+			m  = (ex * 200.0);
+			System.out.println("Sua multa devido ao excesso tem o valor de:" + m);
+		}
+			else
+			{
+				p = 0;
+				ex = 0;
+				m = 0;
+
+				System.out.println("P: "+p+", E: "+ex+", M: "+m);
+				System.out.println("\nNão tem multa");
+			}
+	}
+}

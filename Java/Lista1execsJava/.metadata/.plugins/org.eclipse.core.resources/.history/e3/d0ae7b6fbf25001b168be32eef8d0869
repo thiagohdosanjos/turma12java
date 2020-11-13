@@ -1,0 +1,108 @@
+package Desafios;
+
+import java.util.Scanner;
+
+public class BancoTeste 
+{
+	public static void main(String[] args) 
+	{
+		Scanner leia = new Scanner(System.in);
+		
+		String contas[]= {"Conta Poupança","Conta Corrente","Conta Especial","Conta Empresarial"};
+		
+		int conta;
+		double numConta=0;
+		final int mov = 5;
+		double Debito=0,Credito=0, Saldo=0;
+		String cpf = "000.000.000-00";
+		int x=0;
+		int talaoCheque = 0, numTalao = 0;
+		int metodo;
+		int indice=0;
+		int operacoes = 0;
+		int operacao = 0 ;
+		char confirmacao;
+		char voltar;
+		char verificacao='S';
+		char limite;
+		String nome;
+		
+		for(String conte: contas) 
+		{
+			System.out.print((indice+1)+ " - ");
+			System.out.println(conte);
+			indice++;
+		}
+		
+			System.out.print("\nEscreva um codigo para a utilização da conta(1/2/3/4): ");
+			conta=leia.nextInt();
+		
+		if (conta == 2)
+		{
+			System.out.println("\n----------------Você entrou em Conta Corrente----------------");
+			System.out.print("Insira número da conta: ");
+			numConta = leia.nextInt();
+			System.out.print("Insira seu nome: ");
+			nome = leia.next();
+			System.out.print("Insira seu CPF: ");
+			cpf = leia.next();
+			System.out.println("\nOlá " + nome + " você entrou em sua conta corrente ");
+			System.out.println("Você dispõe de " + talaoCheque + " talões de cheque");
+			System.out.println("Seu saldo: "+ Saldo);
+			
+			while (operacoes < 10) 
+			{
+				
+				System.out.println("Você deseja talões de cheque? 'S' para sim ou 'N' para não ");
+				confirmacao = leia.next().toUpperCase().charAt(0);
+				if (confirmacao == 'S')
+				{
+					System.out.println("Quantos você deseja (1-10)?");
+					numTalao = leia.nextInt();
+					talaoCheque = talaoCheque + numTalao;
+					System.out.println("Quantidade de talões que você dispõe: " + talaoCheque);
+				}else 	
+				{
+				 System.out.println("\n ");
+				 }
+				
+				operacoes++;
+				System.out.println((operacoes)+"ª Operação em '1' - Crédito / '2' - Débito");
+				operacao = leia.nextInt();
+				
+				if(operacao == 1) 
+				{
+					System.out.println("Digite o valor da operação: ");
+					Credito = leia.nextDouble();
+					Saldo = Saldo + Credito ;
+					System.out.println("Você tem R$"+Saldo+" de saldo.");
+				}else if(operacao == 2) 
+				{
+					
+					System.out.println("Digite o valor da operação: ");
+					Debito = leia.nextDouble();
+					if(Debito > Saldo) 	
+					{
+						System.out.println("Você não tem saldo para esta operação de débito.");
+					}else 
+					{
+						Saldo = Saldo - Debito ;
+						System.out.println("Você tem R$"+Saldo+" de saldo.");
+						if (confirmacao == 'S')
+						{
+							System.out.println("Quantos você deseja (1-10)?");
+							numTalao = leia.nextInt();
+							talaoCheque = talaoCheque + numTalao;
+							System.out.println("Você dipõe de " + talaoCheque + "talões de cheque");
+						}else 
+						{
+							System.out.println(" ");
+						}
+				
+					}
+	
+				}
+			}	
+		}
+	}
+}
